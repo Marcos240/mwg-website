@@ -21,7 +21,7 @@
         "voucherify": "^1.10.0"
     },
     "engines": {
-        "node": "4.2.6"
+        "node": "4.7.0"
     },
     "repository": {
         "type": "git",
