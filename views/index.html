@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/voucherify.js/1.4.5/voucherify.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <title>Voucherify Sample Shop</title>
+  </head>
+  <body>
+    <header class="main-header wrapper">
+      <img src="voucherify_logo.png" class="voucherify-logo" alt="voucherify-logo"/>
+      <h1 class="site-title">Voucherify Sample Shop</h1>
+    </header>
+
+    <section class="product-item wrapper">
+      <div class="clearfix">
+        <div class="product-image-column">
+          <figure class="product-img">
+            <img src="/voucherify_product.jpg" alt="product-img"/>
+          </figure>
+          <div id="voucher-checkout" class="voucher-checkout-box"></div>
+        </div>
+
+        <div id="summary-tab" class="summary-column">
+          <div class="tick-icon">OK</div>
+          <div id="summary-message" class="message"></div>
+          <div class="toolbar-row">
+            <button id="back-button" class="back-button">Back to product page</button>
+          </div>
+          <div class="response">
+            <pre id="response-code" class="code"></pre>
+          </div>
+        </div>
+
+        <div id="shop-tab" class="product-description-column">
+          <p class="product-description">
+            This sample application presents <a href="http://www.voucherify.io/?utm_source=github&utm_medium=sample&utm_campaign=act" rel="noopener" target="_blank" title="Voucherify">Voucherify's</a> basic workflow. Follow these steps:
+          <p class="product-description">
+             <ul>
+               <li>Validate one of the voucher codes listed below in the input on the left.</li>
+               <li>Purchase the product to redeem the voucher</li>
+               <li>Analyze the redemption history in <a href="https://app.voucherify.io/#/app/redemptions" rel="noopener" target="_blank" title="Voucherify platform">the Admin Panel</a> (account required).</li>
+             </ul>
+             The source code is available on <a href="https://github.com/voucherifyio/voucherify-nodejs-example">github</a>.
+          </p>
+
+          <div id="vouchers-list" class="vouchers-list clearfix"></div>
+
+          <span class="product-price">
+            Regular Price:&nbsp;
+            <span id="regular-price" class="price-value">0</span>
+            <span class="price-currency">EUR</span>
+          </span>
+
+          <span class="discount-price">
+            Discount:&nbsp;
+            <span id="discount-price" class="price-value">0</span>
+            <span class="price-currency">EUR</span>
+          </span>
+
+          <div class="clearfix">
+            <div class="name-row">
+              <span class="label">Product Name</span>
+              <span class="value">Voucherify sample product</span>
+            </div>
+
+            <div class="count-row">
+              <span class="label">Products Count</span>
+              <span class="input-value">
+                <input id="products-count" name="products-count" value="1" type="number" min="1" />
+              </span>
+            </div>
+
+            <div class="price-row">
+              <span class="label">Total price</span>
+              <span class="value">
+                <span id="old-total-price" class="old-price-value">0</span>
+                <span id="total-price" class="price-value">0</span>
+                <span class="price-currency">EUR</span>
+              </span>
+            </div>
+
+            <div class="shipment-row clearfix">
+              <span class="label">Shipment</span>
+              <span class="value">
+                <span id="free-shipment-label" class="free-label">FREE</span>
+                <span id="shipment-price" class="price-value">0</span>
+                <span class="price-currency">EUR</span>
+              </span>
+            </div>
+
+            <div class="summary-row clearfix">
+              <span class="label">Summary</span>
+              <span class="value">
+                <span id="summary-price" class="price-value">0</span>
+                <span class="price-currency">EUR</span>
+              </span>
+            </div>
+
+            <div class="buy-row">
+              <button id="buy-product-button" class="buy-button">Buy It!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer wrapper">
+      <div class="footer-description"><a href="http://community.voucherify.io" rel="noopener" target="_blank"><span>Join our slack channel&nbsp;</span><img src="/slack.png" style="vertical-align:middle" alt="slack channel"></a></div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.2/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/voucherify.js/1.4.5/voucherify.min.js"></script>
+    <script>
+      (function (window) {
+        'use strict'
+
+        window.userIdentity = {{ userIdentity | safe | json }}
+        window.clientConfig = {{ clientConfig | safe | json }}
+
+      })(window)
+    </script>
+    <script src="/scripts.js"></script>
+  </body>
+</html>

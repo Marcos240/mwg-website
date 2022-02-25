@@ -1,0 +1,424 @@
+/* Main styles */
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+.wrapper {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+/* Main Header */
+
+.voucherify-logo {
+    width: 80px;
+    float: left;
+    position: relative;
+    margin: -12px 20px 0 0;
+}
+
+.site-title {
+    color: #36b3a8;
+    font-size: 40px;
+    padding: 0 0 30px;
+}
+
+.site-title,
+.product-item {
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 20px;
+}
+
+.product-item .left-column {
+    width: 50%;
+}
+
+/* Product section */
+#products-count {
+    text-align: right;
+    width: 100%;
+}
+
+.product-image-column,
+.summary-column,
+.product-description-column {
+    float: left;
+    position: relative;
+    width: 50%;
+}
+
+.product-image-column .voucher-checkout-box {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -90px;
+    margin-bottom: 50px;
+}
+
+.summary-column {
+    display: none;
+}
+
+.summary-column .tick-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px #08ffb9 solid;
+    color: #08ffb9;
+    text-align: center;
+    padding: 10px 5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px auto 25px;
+}
+
+.summary-column .response .code {
+    font-size: 10px;
+    line-height: 1.4em;
+    background-color: #EFEFEF;
+    padding: 20px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    max-height: 450px;
+    overflow: auto;
+}
+
+.vouchers-list {
+    width: 100%;
+    margin: 10px 0 10px;
+}
+
+.vouchers-list .voucher-item {
+    position: relative;
+    width: 19.3%;
+    float: left;
+    padding: 0 5px;
+    background-color: #38B3A8;
+    color: #FFFFFF;
+    margin: 0.3%;
+    text-align: center;
+    height: 150px;
+    max-height: 150px;
+}
+
+.vouchers-list .voucher-item .voucher-code {
+    font-size: 20px;
+    padding: 15px 0 10px;
+}
+
+.vouchers-list .voucher-item .voucher-percent,
+.vouchers-list .voucher-item .voucher-amount {
+    font-size: 15px;
+    line-height: 2.7em;
+}
+
+.vouchers-list .voucher-item .voucher-percent .percent-off {
+    font-size: 20px;
+    line-height: 0.5em;
+}
+
+.vouchers-list .voucher-item .voucher-amount .fa,
+.vouchers-list .voucher-item .voucher-unit .fa {
+    margin-right: 5px;
+}
+
+.vouchers-list .voucher-item .voucher-unit .unit-off {
+    font-weight: bold;
+    margin-right: 5px;
+    font-size: 17px;
+    width: 100%;
+    display: inline-block;
+}
+
+.vouchers-list .voucher-item .voucher-redemption {
+    font-size: 10px;
+}
+
+.vouchers-list .voucher-item .voucher-expiration  {
+    position: absolute;
+    text-align: center;
+    font-size: 10px;
+    bottom: 0;
+}
+
+.product-item .right-column {
+    width: 50%;
+}
+
+.right-column {
+    width: 70%;
+    padding: 15px;
+}
+
+.product-item .left-column,
+.left-column {
+    float: left;
+}
+
+.product-item .right-column,
+.right-column {
+    float: right;
+}
+
+.product-item .product-img {
+    width: 100%;
+    margin: 0;
+    position: relative;
+    top: -20px
+}
+
+.product-item .product-img img {
+    width: 100%;
+}
+
+.product-item .product-name {
+    font-size: 30px;
+}
+
+.product-item .product-price {
+    font-size: 20px;
+}
+
+.product-item .discount-price {
+    font-size: 25px;
+}
+
+.product-item .product-price,
+.product-item .discount-price {
+    display: inline-block;
+    width: 100%;
+}
+
+.product-item .product-price .price-value,
+.product-item .product-price .price-currency,
+.product-item .discount-price .price-value,
+.product-item .discount-price .price-currency {
+    font-weight: bold;
+}
+
+.old-price-value {
+    width: 100%;
+    font-size: 15px;
+    font-style: italic;
+    color: #CCC;
+    text-decoration: line-through;
+}
+
+.voucher-column .label {
+    font-size: 23px;
+    padding: 5px 0 20px;
+    font-weight: bold;
+}
+
+.price-row {
+    padding: 10px 0 10px 0;
+    width: 30%;
+}
+
+.name-row,
+.count-row {
+    padding: 10px 5px 10px 0;
+    width: 35%;
+}
+
+.name-row,
+.count-row,
+.price-row {
+    float: left;
+    text-align: right;
+}
+
+.name-row .label,
+.count-row .label,
+.price-row .label {
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+.name-row .value,
+.count-row .input-value,
+.price-row .value {
+    font-size: 17px;
+}
+
+.name-row .label,
+.count-row .label,
+.price-row .label {
+    background-color: #EFFEFE;
+}
+
+.name-row .label,
+.count-row .label,
+.price-row .label,
+.name-row .value,
+.count-row .input-value,
+.price-row .value {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+}
+
+.price-row .label,
+.count-row .label,
+.count-row .input-value,
+.price-row .value {
+    text-align: right;
+}
+
+.count-row .input-value input {
+    width: 50px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border: 1px solid #888888;
+    position: relative;
+    top: -4px;
+}
+
+.shipment-row {
+    float: left;
+    font-size: 17px;
+    background-color: #EFFEFE;
+    width: 100%;
+    padding: 10px;
+}
+
+.shipment-row .label,
+.shipment-row .value {
+    display: inline-block;
+    float: left;
+}
+
+.shipment-row .label {
+    width: 60%;
+}
+
+.shipment-row .value {
+    width: 40%;
+    text-align: right;
+}
+
+.shipment-row .price-value.free-active {
+    text-decoration: line-through;
+}
+
+.shipment-row .free-label {
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.summary-row {
+    float: left;
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
+}
+
+.summary-row .label,
+.summary-row .value {
+    display: inline-block;
+    float: left;
+}
+
+.summary-row .label {
+    width: 60%;
+}
+
+.summary-row .value {
+    width: 40%;
+    text-align: right;
+}
+
+.buy-row {
+    text-align: right;
+}
+
+.toolbar-row {
+    text-align: center;
+}
+
+.buy-row,
+.toolbar-row {
+    width: 100%;
+}
+
+.buy-row .buy-button,
+.toolbar-row .back-button {
+    display: block;
+    border: 0;
+    border-radius: 2em;
+    padding: 0 1.75em;
+    margin: 20px 0;
+    cursor: pointer;
+    outline: 0;
+    line-height: 3em;
+    height: 3em;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #08ffb9;
+    color: rgba(63, 49, 49, .8);
+}
+
+.buy-row .buy-button {
+    float: right;
+}
+
+/* Main Footer */
+.main-footer {
+    text-align: center;
+}
+
+.main-footer .footer-description {
+    color: #cccccc;
+    font-size: 12px;
+    padding: 0 0;
+}
+
+.main-footer .footer-description a {
+    text-decoration: none;
+}
+
+.main-footer .footer-description a:hover {
+    text-decoration: underline;
+}
+
+/* overrides for voucherify */
+
+.voucherifyContainer,
+.voucherifyLogo {
+    box-sizing: content-box;
+}
+
+.voucherifyContainer {
+    box-shadow: 0 0 40px 10px rgba(256, 256, 256, 0.8) !important;
+    -webkit-box-shadow: 0 0 40px 10px rgba(256, 256, 256, 0.8) !important;
+}
